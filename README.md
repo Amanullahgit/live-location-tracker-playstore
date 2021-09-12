@@ -1,16 +1,20 @@
-# live_tracker
+# Flutter Live Location Tracker Playstore
 
-A new Flutter project.
+This is the source code for Live Location Tracker available in playstore.<br>
 
-## Getting Started
+## App Features
+- Pair with other devices using QR CODE.<br>
+- Turn on your location live.<br>
+- Get connected with your friends live.<br>
+- Find your friend's location on google map and track them live.<br>
+- No Ads, Complete FREE.<br><br>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+For Step By Step Guide Follow Video Tutorials:
+- [Here is how it looks](https://youtu.be/KtjPaPQV7Tc)
+- [Download Here](https://bit.ly/3C3cu0b)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<br><br>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Feel Free to copy the code and use it.<br>
+Don't forget to star the repo and review the app :)
