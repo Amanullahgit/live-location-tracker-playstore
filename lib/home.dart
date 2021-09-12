@@ -37,7 +37,10 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _requestPermission();
+    WidgetsBinding.instance!.addPostFrameCallback((_) => showDialog(
+          context: context,
+          builder: (context) => _buildDisclaimerDialog(context),
+        ));
   }
 
   @override
@@ -150,5 +153,31 @@ class _HomePageState extends State<HomePage> {
       _requestPermission();
     }
     print(statuses);
+  }
+
+  Widget _buildDisclaimerDialog(BuildContext context) {
+    return new AlertDialog(
+      title: const Text('Disclaimer'),
+      content: new Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          _buildDisclaimerText(),
+        ],
+      ),
+      actions: <Widget>[
+        TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              _requestPermission();
+            },
+            child: Text('Okay, got it!'))
+      ],
+    );
+  }
+
+  Widget _buildDisclaimerText() {
+    return new Text(
+        'This app collects location data to enable live location sharing with your friends even when the app is closed or not in used. we do not share your location to anyone anywhere, and you can allow and pair your device with your friend. you have the right to turn the live location ON/OFF.');
   }
 }
