@@ -84,11 +84,11 @@ class _ScannerScreenState extends State<ScannerScreen> {
         await FirebaseFirestore.instance
             .collection(widget.user_id)
             .doc('pairs')
-            .set({barcode: true});
+            .set({barcode: true}, SetOptions(merge: true));
         await FirebaseFirestore.instance
             .collection(barcode)
             .doc('pairs')
-            .set({widget.user_id: true}).whenComplete(
+            .set({widget.user_id: true}, SetOptions(merge: true)).whenComplete(
                 () => Navigator.of(context).pop());
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (context) => HomePage()),
