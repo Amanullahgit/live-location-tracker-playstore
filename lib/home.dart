@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
 
     setState(() {
       deviceName = androidInfo.host!;
-      user_id = androidInfo.androidId!;
+      user_id = androidInfo.id!;
     });
     if (await InternetStatus().checkInternet) {
       getUserInfo();

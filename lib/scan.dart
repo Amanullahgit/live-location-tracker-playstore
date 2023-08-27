@@ -33,7 +33,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
         children: [
           Expanded(
             child: Center(
-              child: QrImage(
+              child: QrImageView(
                 data: widget.user_id,
                 version: QrVersions.auto,
                 size: 200.0,
